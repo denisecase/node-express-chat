@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+  <title>Chat</title>
+  <link rel='stylesheet' href='public/chat.css' />
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="public/chat.js"></script>
+</head>
+
+<body>
+
+  <ul id="messages"></ul>
+
+  <div id="notifyUser"></div>
+
+  <form id="chatform">
+    <input type="hidden" id="user" value="" />
+    <input id="m" autocomplete="off" placeholder="Type your message here.." /><input
+      type="submit" id="button" value="Send" />
+  </form>
+
+</body>
+
+</html>
+<!-- Reference: http://javabeginnerstutorial.com/javascript-2/create-simple-chat-application-using-node-js-express-js-socket-io/ -->

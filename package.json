@@ -1,0 +1,29 @@
+{
+  "name": "node-express-chat",
+  "version": "1.0.0",
+  "description": "Simple Express Chat app",
+  "main": "app.js",
+  "dependencies": {
+    "express": "latest",
+    "socket.io": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "node-express-chat"
+  },
+  "keywords": [
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "web",
+    "chat",
+    "app", 
+    "jQuery"
+  ],
+  "author": "Denise Case",
+  "license": "MIT"
+}
