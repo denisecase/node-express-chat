@@ -5,8 +5,8 @@ const server = http.createServer(app)  // pass in the Express app to our http se
 const io = require('socket.io')(server) // pass in our server to get a Socket.io server
 const path = require('path')
 
-const hostname = '127.0.0.1';
-const port = 3001;
+const hostname = '0.0.0.0'    // allows access from remote computers
+const port = 3003;
 
 // By default, Express does not serve static files. 
 // Configure middleware with app.use
