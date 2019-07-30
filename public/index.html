@@ -3,10 +3,27 @@
 
 <head>
   <title>Chat</title>
-  <link rel='stylesheet' href='public/chat.css' />
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="public/chat.js"></script>
+
+  <!-- simple responsive style -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+
+  <!-- add custom styles  -->
+
+  <link rel='stylesheet' href='chat.css' />
+
+  <!-- add socket.io and jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.slim.js"
+    integrity="sha256-RtMTraB5gGlLER0FkKBcaXCmZCQCxkKS/dXm7MSEoEY=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+  <!-- add custom client-side code -->
+
+  <script src="chat.js"></script>
+
 </head>
 
 <body>
@@ -15,11 +32,12 @@
 
   <div id="notifyUser"></div>
 
-  <form id="chatform">
-    <input type="hidden" id="user" value="" />
-    <input id="m" autocomplete="off" placeholder="Type your message here.." /><input
-      type="submit" id="button" value="Send" />
-  </form>
+  <fieldset>
+    <input id="m" autocomplete="off" placeholder="Type your message here.." />
+    <input type="button" id="button" value="Send" />
+  </fieldset>
+
+  <input type="hidden" id="user" value="" />
 
 </body>
 

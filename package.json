@@ -4,12 +4,17 @@
   "description": "Simple Express Chat app",
   "main": "app.js",
   "dependencies": {
+    "config": "latest",
     "express": "latest",
     "socket.io": "latest"
   },
+  "devDependencies": {
+    "nodemon": "latest"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +26,7 @@
     "Express.js",
     "web",
     "chat",
-    "app", 
+    "app",
     "jQuery"
   ],
   "author": "Denise Case",

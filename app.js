@@ -1,21 +1,36 @@
-const http = require('http')  // use require to import the Node.js http package
-const express = require('express')  // require Express framework
-const app = express()  // create an Express web app
-const server = http.createServer(app)  // pass in the Express app to our http server
-const io = require('socket.io')(server) // pass in our server to get a Socket.io server
-const path = require('path')
+// When using sockets, require the native Node.js http package
+const http = require('http')  
 
-const hostname = '0.0.0.0'    // allows access from remote computers
-const port = 3003;
+// Require native path (__dirname is the folder of the current file)
+const path = require('path');
+
+// Require config - don't recompile just to change local port!
+const config = require('config')
+
+// require Express framework to assist with middleware and routing
+const express = require('express') 
+
+// create an Express web app
+const app = express()  
+
+// make an http server from the app
+const server = http.createServer(app)  
+
+// make a Socket.io server (io) from our http server
+const io = require('socket.io')(server) 
+
+// Use hosting values if available, otherwise default 
+const environment = process.env.NODE_ENV || 'development'
+const hostname = process.env.HOSTNAME || config.get("hostname")
+const port = process.env.PORT || config.get("port");
 
 // By default, Express does not serve static files. 
-// Configure middleware with app.use
-// use '/public to access files in the 'public' folder
-app.use('/public', express.static(path.join(__dirname, 'public')));
+// use middleware to define a static assets folder 'public'
+app.use(express.static('public'));
 
-// on a GET request to default page, serve up html
+// on a GET request to default page, serve html
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './public/index.html'))
+  res.sendFile('index.html')
 })
 
 // on a connection event, act as follows (socket interacts with client)
