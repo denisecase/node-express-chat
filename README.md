@@ -61,14 +61,6 @@ Open PowerShell here as admin and start your app with nodemon: `nodemon app.js`
 - [Bootstrap Material Design CDN](https://mdbootstrap.com/md-bootstrap-cdn/)
 - [HTML Validator](https://validator.w3.org/)
 - [JavaScript Standard Style Validator](https://standardjs.com/demo.html)
-
 ## See Also
 
-- [js-console](https://github.com/profcase/js-console)
-- [js-gui](https://github.com/profcase/js-gui)
-- [js-gui-vue](https://github.com/denisecase/js-gui-vue)
-- [js-gui-storage](https://github.com/profcase/js-gui-storage)
-- [node-server](https://github.com/denisecase/node-server)
-- [node-express-app](https://github.com/denisecase/node-express-app)
-- [node-express-chat](https://github.com/denisecase/node-express-chat)
-- [node-express-mvc](https://github.com/denisecase/node-express-mvc)
+- [More App Examples](https://profcase.github.io/web-apps-list/)
