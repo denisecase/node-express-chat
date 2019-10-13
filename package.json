@@ -1,34 +1,42 @@
 {
   "name": "node-express-chat",
-  "version": "1.0.0",
   "description": "Simple Express Chat app",
-  "main": "app.js",
+  "version": "1.0.0",
+  "author": "Denise Case",
+  "bugs": {
+    "url": "https://github.com/denisecase/node-express-chat/issues"
+  },
+  "contributors": [
+    "Denise Case <dcase@nwmissouri.edu> (https://github.com/profcase)"
+  ],
   "dependencies": {
     "config": "latest",
     "express": "latest",
+    "helmet": "latest",
     "socket.io": "latest"
   },
   "devDependencies": {
     "nodemon": "latest"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
-  },
+  "homepage": "https://node-express-chat-563.herokuapp.com/",
+  "keywords": [
+    "Express.js",
+    "JavaScript",
+    "Node.js",
+    "app",
+    "chat",
+    "jQuery",
+    "web"
+  ],
+  "license": "MIT",
+  "main": "app.js",
   "repository": {
     "type": "git",
     "url": "node-express-chat"
   },
-  "keywords": [
-    "JavaScript",
-    "Node.js",
-    "Express.js",
-    "web",
-    "chat",
-    "app",
-    "jQuery"
-  ],
-  "author": "Denise Case",
-  "license": "MIT"
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

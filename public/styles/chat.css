@@ -1,5 +1,20 @@
 body {
-  font: 1.8em Helvetica, Arial;
+  font: 1.5em Helvetica, Arial;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height: 100%;
+}
+
+main {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  margin-bottom: 3.5em;
+}
+
+footer {
+  flex: none;
 }
 
 fieldset {
@@ -11,10 +26,11 @@ fieldset {
 }
 
 fieldset input {
-  border: 0;
+  font: 1.0em Helvetica, Arial;
+   border: 0;
   padding: .3em;
   margin-right: .5%;
-  width: 80%;
+  width: 75%;
 }
 
 fieldset #button {
@@ -22,7 +38,7 @@ fieldset #button {
   background: #2D9F0B;
   border: none;
   padding: .3em;
-  width: 10%;
+  max-width: 15%;
 }
 
 #messages {

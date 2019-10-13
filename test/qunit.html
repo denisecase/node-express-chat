@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QUnit</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+</head>
+
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+
+  <!-- qunit code -->
+  <script defer src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+
+  <!-- add socket.io from https://cdnjs.com/libraries/socket.io -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.slim.js"
+    integrity="sha256-Dul4c09cdrWKXVtallPxF558lwxMwCC8dXJdZ0PVW54=" crossorigin="anonymous"></script>
+
+  <!-- add jQuery from https://cdnjs.com/libraries/jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+  <!-- then, add source code -->
+  <script type=module src="../public/scripts/namer.js"></script>
+
+  <!-- finally, add test code -->
+  <script type=module src="namer.test.js"></script>
+
+</body>
+
+</html>

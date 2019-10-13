@@ -2,44 +2,36 @@
 <html lang='en'>
 
 <head>
-  <title>Chat</title>
-
-  <!-- simple responsive style -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+  <title>Chat</title>
+  <link rel='stylesheet' href='./styles/chat.css' />
+</head>
 
-  <!-- add custom styles  -->
+<body>
+  <input type="hidden" id="user" value="" />
 
-  <link rel='stylesheet' href='chat.css' />
+  <main>
+    <ul id="messages"></ul>
+  </main>
 
-  <!-- add socket.io and jquery -->
+  <footer>
+    <div id="notifyUser"></div>
+    <fieldset>
+      <input id="m" autocomplete="off" placeholder="Type your message here.." />
+      <input type="button" id="button" value="Send" />
+    </fieldset>
+  </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.slim.js"
-    integrity="sha256-RtMTraB5gGlLER0FkKBcaXCmZCQCxkKS/dXm7MSEoEY=" crossorigin="anonymous"></script>
+  <!-- add socket.io from https://cdnjs.com/libraries/socket.io -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.slim.js"
+    integrity="sha256-Dul4c09cdrWKXVtallPxF558lwxMwCC8dXJdZ0PVW54=" crossorigin="anonymous"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 
-  <!-- add custom client-side code -->
-
-  <script src="chat.js"></script>
-
-</head>
-
-<body>
-
-  <ul id="messages"></ul>
-
-  <div id="notifyUser"></div>
-
-  <fieldset>
-    <input id="m" autocomplete="off" placeholder="Type your message here.." />
-    <input type="button" id="button" value="Send" />
-  </fieldset>
-
-  <input type="hidden" id="user" value="" />
-
+  <!-- use new ES6 modules to make import/export easy -->
+  <script type=module src="./scripts/namer.js"></script>
+  <script type=module src="./scripts/chat.js"></script>
 </body>
 
 </html>
-<!-- Reference: http://javabeginnerstutorial.com/javascript-2/create-simple-chat-application-using-node-js-express-js-socket-io/ -->

@@ -11,7 +11,7 @@
 ## Requirements
 
 - A browser (e.g., Chrome)
-- A text editor (e.g., VS Code, or Notepad++, or Chrome)
+- A text editor (e.g., VS Code)
 
 ## Responsive Style
 
@@ -19,7 +19,7 @@
 
 ## Benefits
 
-- No build tools yet
+- Still no build tools needed
 - Node.js non-blocking event loop supports many concurrent requests
 - Socket.io makes full duplex communication easy
 
@@ -28,32 +28,37 @@
 - [node-server](https://github.com/denisecase/node-server)
 - [node-express-app](https://github.com/denisecase/node-express-app)
 
-## Install Dependencies Listed in package.json
+## Install Dependencies
 
-Open PowerShell here as admin and run: `npm install`. Verify node_modules was created. Review the contents.
+Open PowerShell here as admin and run:
+
+```PowerShell
+npm install
+```
 
 ## Start your Server
 
-Open PowerShell here as admin and start your app with nodemon: `nodemon app.js`
+Open PowerShell here as admin and start your app with nodemon:
+
+```PowerShell
+npm run dev
+```
 
 ## Open a Browser Client
 
 1. Open a web browser.
 2. Go to the URL: <http://127.0.0.1:3003/> or <http://localhost:3003/>.
 
-## Use PowerShell and ipconfig to get your IP address
+## Find Your IP Address
 
-1. Open PowerShell as Admin, run ipconfig.
-1. Find your IPv4 address.
-1. Invite others to interact with your server-side app.
+Open PowerShell as Admin, run ```ipconfig```. Locate your IPv4 address. Invite others to interact with your hosted chat app.
 
 ## Terms
 
 - full duplex
 - [hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
 - npm install
-- node_modules
-- package-lock.json
+- npx fixpack
 - [Socket.io](https://socket.io/)
 
 ## Reference
@@ -63,3 +68,4 @@ Open PowerShell here as admin and start your app with nodemon: `nodemon app.js`
 ## See Also
 
 - [More App Examples](https://profcase.github.io/web-apps-list/)
+- [fixpack - auto-organize package.json](https://www.npmjs.com/package/fixpack)
