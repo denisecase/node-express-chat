@@ -5,7 +5,7 @@
 
 ## Links
 
-- No demo - it's not secure (that's part of the fun)
+- [Demo](https://node-express-chat-563.herokuapp.com/)
 - [Source](https://github.com/denisecase/node-express-chat)
 
 ## Requirements
