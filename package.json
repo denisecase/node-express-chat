@@ -10,7 +10,7 @@
     "Denise Case <dcase@nwmissouri.edu> (https://github.com/profcase)"
   ],
   "dependencies": {
-    "config": "latest",
+    "config": "3.3.2",
     "express": "latest",
     "helmet": "3.23.3",
     "socket.io": "latest"
