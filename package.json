@@ -13,7 +13,7 @@
     "config": "3.3.2",
     "express": "latest",
     "helmet": "3.23.3",
-    "socket.io": "latest"
+    "socket.io": "3.0.4"
   },
   "devDependencies": {
     "nodemon": "latest"
