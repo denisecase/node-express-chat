@@ -11,7 +11,7 @@
   ],
   "dependencies": {
     "config": "3.3.2",
-    "express": "latest",
+    "express": "4.17.2",
     "helmet": "3.23.3",
     "socket.io": "latest"
   },
