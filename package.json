@@ -11,9 +11,9 @@
   ],
   "dependencies": {
     "config": "3.3.2",
-    "express": "latest",
+    "express": "4.17.3",
     "helmet": "5.0.1",
-    "socket.io": "latest"
+    "socket.io": "4.6.0"
   },
   "devDependencies": {
     "nodemon": "latest"
