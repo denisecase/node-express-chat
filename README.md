@@ -34,10 +34,7 @@ Open PowerShell here as admin and run:
 
 ```PowerShell
 npx npm-check-updates -u
-
 npm install
-
-# if requested
 npm audit fix
 ```
 
