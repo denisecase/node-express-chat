@@ -1,0 +1,80 @@
+# ============================================================
+# .markdownlint-cli2.yaml (ALL-REPOS)
+# ============================================================
+# Updated: 2026-06-27
+#
+# WHY: Check authored Markdown while ignoring generated output,
+# dependency directories, virtual environments, caches, and build artifacts.
+# REQ: Markdown lint should check source documentation, not generated docs,
+# dependency trees, coverage output, or runtime artifacts.
+#
+# Run with:
+# npx markdownlint-cli2 --fix
+
+# === Authored Markdown inputs ===
+
+globs:
+  - "**/*.md"
+
+# === Generated, dependency, cache, and non-source ignores ===
+
+ignores:
+  # WHY: Virtual environments and dependency trees are not authored Markdown.
+  - ".venv/**"
+  - "**/.venv/**"
+  - "node_modules/**"
+  - "**/node_modules/**"
+
+  # WHY: Build and distribution output is generated.
+  - "build/**"
+  - "**/build/**"
+  - "dist/**"
+  - "**/dist/**"
+  - "site/**"
+  - "**/site/**"
+
+  # WHY: Tool caches and coverage output are generated.
+  - ".mypy_cache/**"
+  - "**/.mypy_cache/**"
+  - ".nox/**"
+  - "**/.nox/**"
+  - ".pytest_cache/**"
+  - "**/.pytest_cache/**"
+  - ".pyright/**"
+  - "**/.pyright/**"
+  - ".ruff_cache/**"
+  - "**/.ruff_cache/**"
+  - ".tox/**"
+  - "**/.tox/**"
+  - ".uv-cache/**"
+  - "**/.uv-cache/**"
+  - "htmlcov/**"
+  - "**/htmlcov/**"
+
+  # WHY: Extensionless repository metadata files are not authored Markdown.
+  - "LICENSE"
+  - "CODEOWNERS"
+  - ".github/CODEOWNERS"
+  - "**/CODEOWNERS"
+  - "**/.github/CODEOWNERS"
+
+# === Markdown lint defaults ===
+
+config:
+  default: true # WHY: Enable default Markdown rules as the project baseline.
+
+  # === Line length ===
+
+  MD013:
+    line_length: 300 # CUSTOM: THIS REPO ONLY
+    headings: false # WHY: Long headings may be needed for clarity.
+    tables: false # WHY: Long table cells may be needed for readability.
+    code_blocks: false # WHY: Long code lines should not be wrapped by Markdown lint.
+
+  # === Document structure ===
+
+  MD025: false # WHY: Allow multiple top-level headings in README/docs/index style files.
+
+  # === Inline HTML ===
+
+  MD033: false # WHY: Markdown allows raw HTML; docs may need embeds, details, video, images, and custom layout.
