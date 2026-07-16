@@ -41,7 +41,7 @@ io.on('connection', (socket) => {
   })
 })
 
-  // Start listenting and tell user where to find the app 
+  // Start listening and tell user where to find the app 
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`)
 })
